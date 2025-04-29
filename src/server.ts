@@ -1,40 +1,15 @@
-import express from 'express';
-import { dirname, resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { CommonEngine } from '@angular/ssr/node'
+import { render } from '@netlify/angular-runtime/common-engine.mjs'
 
-/**
- * Configuración de carpetas de distribución
- */
-const serverDistFolder = dirname(fileURLToPath(import.meta.url));
-const browserDistFolder = resolve(serverDistFolder, '../browser');
+const commonEngine = new CommonEngine()
 
-/**
- * Inicialización de Express
- */
-const app = express();
+export async function netlifyCommonEngineHandler(request: Request, context: any): Promise<Response> {
+  // Example API endpoints can be defined here.
+  // Uncomment and define endpoints as necessary.
+  // const pathname = new URL(request.url).pathname;
+  // if (pathname === '/api/hello') {
+  //   return Response.json({ message: 'Hello from the API' });
+  // }
 
-/**
- * Servir archivos estáticos desde /browser
- */
-app.use(
-  express.static(browserDistFolder, {
-    maxAge: '1y',
-    index: false,
-    redirect: false,
-  }),
-);
-
-/**
- * Para cualquier otra ruta, devolver el index.html
- */
-app.get('*', (req, res) => {
-  res.sendFile(resolve(browserDistFolder, 'index.html'));
-});
-
-/**
- * Iniciar el servidor si este módulo es el principal
- */
-const port = process.env['PORT'] || 4000;
-app.listen(port, () => {
-  console.log(`Servidor Express escuchando en http://localhost:${port}`);
-});
+  return await render(commonEngine)
+}
