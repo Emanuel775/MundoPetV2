@@ -1,5 +1,5 @@
 [build]
-  publish = "dist/mundo-pet/browser"    # <- carpeta de salida de Angular (ajusta si es diferente)
+  publish = "dist/browser"    # <- carpeta de salida de Angular (ajusta si es diferente)
   command = "npm run build"   # <- el comando para construir tu app (o el que uses)
 
 [[redirects]]
