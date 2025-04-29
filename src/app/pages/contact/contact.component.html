@@ -1,0 +1,89 @@
+<app-header></app-header>
+
+<div class="contact-container">
+    <div class="servicio-card">
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+            <h2>Contáctanos</h2>
+
+            <!-- Group Nombre y Apellido -->
+            <div class="row form-group">
+                <div class="col-md-6">                
+                    <label for="nombre">Nombre</label>
+                    <input id="nombre" type="text" formControlName="nombre" placeholder="Ingresa tu nombre" />
+                </div>
+
+                <div class="col-md-6">
+                    <label for="apellido">Apellido</label>
+                    <input id="apellido" type="text" formControlName="apellido" placeholder="Ingresa tu apellido" />
+                </div>
+            </div>
+                
+            <!-- Group Correo y Confirmar Correo -->
+            <div class="row form-group">
+                <div class="col-md-6">
+                    <label for="correo">Correo</label>
+                    <input id="correo" type="email" formControlName="correo" placeholder="Ingresa tu correo electrónico" />                
+                </div>
+
+                <div class="col-md-6">
+                    <label for="confirmarCorreo">Confirmar Correo</label>
+                    <input id="confirmarCorreo" type="email" formControlName="confirmarCorreo" placeholder="Confirma tu correo electrónico" />
+                </div>
+            </div>
+
+            <!-- Group Ciudad y Barrio -->
+            <div class="row form-group">
+                <div class="col-md-6">                                    
+                    <label for="ciudad">Ciudad</label>
+                    <select id="Ciudad" formControlName="Ciudad" placeholder="Selecciona una ciudad">
+                        <option value="" disabled selected>Selecciona una ciudad</option>
+                        <option value="Bogota">Bogotá</option>
+                        <option value="Medellin">Medellin</option>
+                        <option value="Ibague">Ibagué</option>
+                    </select>                    
+                </div>
+                
+                <div class="col-md-6">                
+                    <label for="barrio">Barrio</label>
+                    <input id="barrio" type="text" formControlName="barrio" placeholder="Ingresa tu barrio" />
+                </div>
+            </div>
+            
+            <!-- Group telefono y validación movil -->
+            <div class="row form-group">
+                <div class="col-md-6">                                    
+                    <label for="telefono">Teléfono</label>
+                    <input id="telefono" type="tel" formControlName="telefono" placeholder="Ingresa tu teléfono" />
+                </div>
+                
+                <div class="col-md-6">                
+                    <label style="text-align: center;" for="esMovil">¿Es móvil?</label>
+                    <input id="esMovil" type="checkbox" formControlName="esMovil" />
+                </div>
+            </div>
+
+            <!-- Group Asunto -->
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <label for="asunto">Asunto</label>
+                    <input id="asunto" type="text" formControlName="asunto" placeholder="Ingresa el asunto" />
+                </div>
+            </div>
+
+            <!-- Group Comentarios -->
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <label for="comentarios">Comentarios</label>
+                    <textarea id="comentarios" formControlName="comentarios" rows="3" placeholder="Ingresa tus comentarios"></textarea>                    
+                </div>
+            </div>
+            
+            <button type="submit" [disabled]="contactForm.invalid">Enviar</button>
+        </form>
+    </div>
+</div>
+  
+
+
+
+<app-footer></app-footer>

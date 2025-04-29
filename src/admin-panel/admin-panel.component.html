@@ -1,0 +1,122 @@
+<header class="header">
+  <div class="logo">
+    <img src="assets/images/Logo_MundoPet.png" alt="Logo Mundo Pet"/>
+  </div>
+  <nav class="nav-bar">
+    <ul>
+      <li><a routerLink="/admin/dashboard" routerLinkActive="active">Dashboard</a></li>
+      <li><a routerLink="/admin/productos" routerLinkActive="active">Productos</a></li>
+      <li><a routerLink="/admin/usuarios" routerLinkActive="active">Usuarios</a></li>
+      <li><a routerLink="/admin/configuracion" routerLinkActive="active">Configuración</a></li>
+      <li><a (click)="logout()" style="cursor: pointer;">Cerrar sesión</a></li>
+
+
+      
+     
+    </ul>
+  </nav>
+  </header>
+  <body>
+<!-- Carrusel Principal -->
+<div id="CarruselPrincipal" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-wrap="true">
+  <div class="carousel-indicators">
+      <button type="button" data-bs-target="#CarruselPrincipal" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#CarruselPrincipal" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#CarruselPrincipal" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#CarruselPrincipal" data-bs-slide-to="3" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#CarruselPrincipal" data-bs-slide-to="4" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+      <div class="carousel-item active">
+          <img src="assets/images/Carrusel_1.jpg" class="d-block w-100" alt="Primera imagen">
+      </div>
+      <div class="carousel-item">
+          <img src="assets/images/Carrusel_2.jpg" class="d-block w-100" alt="Segunda imagen">
+      </div>
+      <div class="carousel-item">
+          <img src="assets/images/Carrusel_3.jpg" class="d-block w-100" alt="Tercera imagen">
+      </div>
+      <div class="carousel-item">
+          <img src="assets/images/Carrusel_4.jpg" class="d-block w-100" alt="Tercera imagen">
+      </div>
+      <div class="carousel-item">
+          <img src="assets/images/Carrusel_5.jpg" class="d-block w-100" alt="Tercera imagen">
+      </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#CarruselPrincipal" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#CarruselPrincipal" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+  </button>
+</div>
+
+
+<!-- Sección Productos -->
+<section class="productos-section">
+  <div class="container">
+    <h2 class="productos-titulo">Nuestros Productos</h2>
+    <div class="row">
+
+      <div class="col-md-3">
+        <div class="producto-card">
+          <h3 class="producto-nombre">Cuidado y Aseo</h3>
+          <img src="assets/images/Inicio_Aseo.jpg" alt="Cuidado y Aseo" class="producto-imagen">
+        </div>
+      </div>
+      
+      <div class="col-md-3">
+        <div class="producto-card">
+          <h3 class="producto-nombre">Alimento para Mascotas</h3>
+          <img src="assets/images/Producto_2.jpg" alt="Alimento para Mascotas" class="producto-imagen">
+        </div>
+      </div>
+      
+      <div class="col-md-3">
+        <div class="producto-card">
+          <h3 class="producto-nombre">Juguetes</h3>
+          <img src="assets/images/Inicio_Juguetes.png" alt="Juguestes" class="producto-imagen">
+        </div>
+      </div>
+      
+      <div class="col-md-3">
+        <div class="producto-card">
+          <h3 class="producto-nombre">Accesorios</h3>
+          <img src="assets/images/Inicio_Accesorios.png" alt="Accesorios" class="producto-imagen">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <div class="dashboard">
+    <h2>Resumen del Panel Administrativo</h2>
+  
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h3>$45.000.000.00</h3>
+        <p>Ventas este mes</p>
+      </div>
+  
+      <div class="stat-card">
+        <h3>184</h3>
+        <p>Productos en stock</p>
+      </div>
+  
+      <div class="stat-card">
+        <h3>1,246</h3>
+        <p>Usuarios registrados</p>
+      </div>
+  
+      <div class="stat-card">
+        <h3>23</h3>
+        <p>Pedidos pendientes</p>
+      </div>
+    </div>
+  </div>
+  
+
+  
+</body>
