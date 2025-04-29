@@ -1,0 +1,8 @@
+[build]
+  publish = "dist/mundo-pet/browser"    # <- carpeta de salida de Angular (ajusta si es diferente)
+  command = "npm run build"   # <- el comando para construir tu app (o el que uses)
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
